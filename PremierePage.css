@@ -1,0 +1,472 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("./Oswald-VariableFont_wght.ttf") format("truetype"); /* Chemin vers la police personnalisée */
+}
+/* l'etaoile sers a donner des styles globaux a tous les elements de la page */
+
+.container {
+  max-width: 1400px; /* Largeur maximale recommandée */
+  margin: 0 auto; /* Centre le conteneur */
+  padding: 0; /* Supprime les marges internes */
+}
+
+.body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+  font-weight: 400; /* ou 300, selon le rendu souhaité */
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: white; /* Couleur de fond de la page */
+  font-family: "Oswald", sans-serif; /* Police personnalisée */
+}
+
+.logo1 {
+  background-color: white; /* Couleur de fond de la page */
+  border-radius: 30px;
+  width: 50px; /* Largeur de l'image */
+  height: 50px; /* Hauteur de l'image */
+  vertical-align: middle;
+}
+
+/* font en video*/
+
+.navbar {
+  margin-top: 5px; /* Espace en haut de la barre */
+  position: fixed; /* Fixe la barre en haut de la page */
+  background-color: transparent; /* Couleur de fond de la barre */
+  top: -5px;
+  left: 0;
+  width: 100%; /* La barre occupe toute la largeur */
+  max-height: 100px; /* Hauteur minimale de la barre */
+  z-index: 10; /* Place la barre au-dessus des autres éléments */
+  display: flex; /* Utilise Flexbox pour aligner les éléments */
+  justify-content: space-between; /* Espace entre les éléments */
+  filter: opacity(0.9);
+  flex-direction: row; /* Aligne les éléments horizontalement */
+  margin-left: 0px; /* Espace à gauche de la barre */
+  margin-right: 0px; /* Espace à droite de la barre */
+  align-items: center; /* Centre verticalement les éléments */
+  align-content: flex-end; /* Aligne le contenu en bas de la barre */
+}
+
+.log .navbarH {
+  height: 50px;
+  position: fixed; /* Fixe la barre en haut de la page */
+  background-color: white; /* Couleur de fond de la barre */
+  transition: background-color 0.3s ease; /* Animation pour le changement de couleur */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar h6 {
+  display: flex; /* Aligne le texte et le logo horizontalement */
+  align-items: center; /* Centre verticalement le texte et le logo */
+  color: white; /* Couleur du texte */
+  font-size: 25px;
+  margin-left: 20px; /* Espace à gauche de la barre */
+}
+
+.title-with-logo img {
+  margin-right: 20px; /* Ajoute un espace entre le logo et le texte */
+}
+
+/* Liste des liens */
+.navbar-menu {
+  list-style: none; /* Supprime les points devant */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around; /* Affiche les éléments en ligne */
+  gap: 20px; /* Espacement entre les liens */
+}
+
+.button-navbar {
+  background-color: #397bb1; /* Couleur de fond du bouton */
+  font-family: "Oswald", sans-serif; /* Police personnalisée */
+  color: white; /* Couleur du texte */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 5px 15px; /* Espacement interne */
+  size: 16px; /* Taille du texte */
+}
+
+.input-container {
+  display: flex; /* Aligne l'input et l'icône sur une ligne */
+  align-items: center; /* Centre verticalement */
+  gap: 5px; /* Espacement entre l'input et l'icône */
+  position: relative; /* Nécessaire pour positionner l'icône */
+}
+
+.input-container input {
+  margin-left: -90px; /* Espace à gauche de l'input */
+  margin-right: 30px; /* Espace à droite de l'input */
+  padding: 10px 40px 10px 10px; /* Ajoute un espace pour l'icône */
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 10px; /* Coins arrondis */
+  font-size: 16px; /* Taille du texte */
+  width: 200px; /* Largeur de l'input */
+  height: 18px; /* Hauteur de l'input */
+  background-color: transparent; /* Fond transparent */
+}
+
+.input-container button {
+  position: absolute; /* Positionne l'icône par rapport à l'input */
+  right: 40px; /* Espace à droite de l'input */
+  top: 50%; /* Centre verticalement */
+  transform: translateY(-50%); /* Centre verticalement */
+  background: none; /* Supprime le fond du bouton */
+  border: none; /* Supprime la bordure du bouton */
+  cursor: pointer; /* Change le curseur au survol */
+  color: #397bb1; /* Couleur de l'icône */
+  font-size: 20px; /* Taille de l'icône */
+}
+
+.input-container button:hover {
+  color: #397bb1; /* Change la couleur au survol */
+}
+
+.title {
+  position: relative;
+  max-width: 1400px; /* Respecte la largeur du conteneur */
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background {
+  margin: none; /* Supprime les marges */
+  position: absolute; /* Fixe la vidéo en arrière-plan */
+  top: -60px;
+  left: 0;
+  width: 100%; /* La vidéo occupe toute la largeur */
+  height: 100%; /* La vidéo occupe toute la hauteur */
+  z-index: -1; /* Place la vidéo derrière les autres éléments */
+  object-fit: cover; /* Recadre la vidéo pour couvrir l'écran */
+  border-radius: 10px; /* Coins arrondis */
+}
+
+.flexbox1 {
+  position: absolute; /* Positionne la flexbox par rapport à la vidéo */
+  top: 70%;
+  left: 30%; /* Centre horizontalement */
+  color: white; /* Couleur du texte */
+  margin-left: 50px; /* Espace à gauche de la section */
+  margin-right: 170px; /* Espace à droite de la section */
+  font-size: 20px; /* Taille du texte */
+  z-index: 1; /* Place la flexbox au-dessus de la vidéo */
+  transform: translate(-50%, -50%); /* Centre parfaitement l'élément */
+  text-shadow: -2px 2px 3px #18171786; /* Ombre du texte */
+  font-family: "Oswald", sans-serif; /* Police personnalisée */
+}
+
+.grid {
+  margin-left: 10%; /* Centre la grille horizontalement */
+  margin-top: -60px;
+  margin-right: 10%; /* Centre la grille horizontalement */
+  display: grid; /* Utilise le modèle de grille CSS */
+  grid-template-columns: 50% 50%; /* deux colonnes de même largeur on peut aussi dire 1fr 1fr a la place de  50% 50% */
+  grid-template-rows: 50% 50%; /* deux lignes de même hauteur */
+  grid-template-areas:
+    "i1 i2"
+    "i3 i4"; /* Définit les zones de la grille */
+  font-size: 20px; /* Taille du texte */
+}
+.grid #gd1 {
+  padding: 1%; /* Espace interne */
+  position: relative; /* Nécessaire pour positionner le pseudo-élément */
+  border-radius: 10px;
+  padding: 10px; /* Espacement interne */
+  align-items: flex-end; /* Aligne le texte en bas */
+  justify-content: flex-start; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  display: block; /* Utilise Flexbox pour centrer le texte */
+}
+.grid #gd1 h5 {
+  color: #397bb1; /* Couleur du texte */
+}
+
+.grid #gd1 #id1 {
+  font-size: 30px; /* Taille du texte */
+}
+
+.grid #gd1 #id2 {
+  font-size: 18px; /* Taille du texte */
+}
+.grid h4 {
+  color: white; /* Couleur du texte */
+  font-size: 20px; /* Taille du texte */
+}
+
+.grid #gd2 {
+  grid-area: i2;
+  background-image: url("./image und video/ImageBackground/ai-generated-7947639_640.jpg"); /* Image de fond */
+}
+.grid #gd3 {
+  grid-area: i3;
+  background-image: url("./image und video/ImageBackground/cranes-7921948_640.jpg");
+}
+
+.grid #gd4 {
+  grid-area: i4;
+  background-image: url("./image und video/ImageBackground/fishing-net-4887070_640.jpg");
+}
+
+.grid #gd2,
+.grid #gd3,
+.grid #gd4 {
+  margin: 20px;
+  position: relative; /* Nécessaire pour positionner le pseudo-élément */
+  background-size: cover; /* L'image couvre tout le header */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image dans le header */
+  max-height: 300px;
+  border-radius: 10px;
+  padding: 10px; /* Espacement interne */
+  color: white; /* Couleur du texte */
+  text-shadow: -2px 2px 3px #18171786; /* Ombre du texte */
+  align-items: flex-end; /* Aligne le texte en bas */
+  justify-content: flex-start; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  align-items: flex-end; /* Aligne le texte en bas */
+  display: flex; /* Utilise Flexbox pour centrer le texte */
+  flex-direction: column; /* Aligne les éléments verticalement */
+  justify-content: flex-end; /* Centre verticalement */
+  align-items: flex-start;
+}
+
+.grid #gd2:hover,
+.grid #gd3:hover,
+.grid #gd4:hover {
+  transform: scale(1.05) rotate(2deg); /* Zoom + légère rotation */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.8);
+  filter: brightness(1.1) contrast(1.1);
+  z-index: 1000;
+}
+
+.grid2 h2 {
+  grid-area: i1;
+  color: #397bb1; /* Couleur du texte */
+  text-transform: uppercase; /* Met le texte en majuscules */
+  font-family: "Oswald", sans-serif; /* Police personnalisée */
+}
+
+.grid a {
+  grid-area: i2;
+}
+
+.mini-quiz {
+  background: url("./image und video/imageBackground/quiz.jpg"); /* Couleur de fond du bouton */
+  background-size: cover; /* L'image couvre tout le header */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image dans le header */
+  font-family: "Oswald", sans-serif; /* Police personnalisée */
+  color: white; /* Couleur du texte */
+  width: 100%; /* Largeur de la section */
+  height: auto; /* Hauteur de la section */
+  text-align: center; /* Centre le texte */
+  padding: 10px; /* Espacement interne */
+  transition: 0.25s ease; /* Animation pour le survol */
+  position: relative; /* Nécessaire pour positionner le pseudo-élément */
+}
+
+.mini-quiz h3 {
+  font-family: "Oswald", sans-serif; /* Police personnalisée */
+  font-size: 30px; /* Taille du texte */
+}
+
+.gutAnswer {
+  visibility: hidden;
+  opacity: 0; /* Cachée par défaut */
+  transition: 0.6s ease; /* Animation pour le survol */
+}
+.visible {
+  visibility: visible; /* Visible */
+  opacity: 1; /* Visible */
+}
+.mini-quiz button {
+  background-color: #397bb1;
+  color: black; /* Couleur du texte */
+  width: 100px; /* Largeur du bouton */
+  border-radius: 10px;
+  height: 30px; /* Hauteur du bouton */
+  border-color: #397bb1; /* Couleur de la bordure */
+  cursor: pointer; /* Change le curseur au survol */
+}
+
+.mini-quiz button:hover {
+  background-color: white; /* Couleur de fond du bouton au survol */
+  transition: 0.25s ease; /* Animation pour le survol */
+}
+
+.commentaire1 {
+  position: absolute; /* Position flottante */
+  background-color: white; /* Couleur de fond */
+  color: black; /* Couleur du texte */
+  padding-top: 25px; /* Espacement interne */
+  padding-bottom: 5px;
+  border-radius: 15px; /* Coins arrondis pour la bulle */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre */
+  z-index: 1000; /* Toujours au-dessus des autres éléments */
+  cursor: pointer; /* Change le curseur au survol */
+  text-align: center; /* Alignement du texte */
+  visibility: hidden; /* Cachée par défaut */
+  width: 200px; /* Largeur de la bulle */
+  height: auto; /* Ajuste la hauteur automatiquement */
+  margin-left: 500px;
+  transition: 0.3s ease;
+  transform: translate(-40%, -40%);
+}
+.commentaire1 p {
+  margin: 0; /* Supprime les marges par défaut */
+  font-family: "Oswald", sans-serif; /* Police personnalisée */
+  text-shadow: -2px 2px 3px #18171786; /* Ombre du texte */
+}
+
+.commentaire1 .close {
+  position: absolute; /* Positionne le bouton de fermeture */
+  top: 5px; /* Espace en haut de la bulle */
+  right: 5px; /* Espace à droite de la bulle */
+  justify-content: flex-end; /* Aligne le texte à droite */
+  background-color: transparent; /* Fond transparent */
+  border: 1px solid #397bb1;
+  border-radius: 30px; /* Coins arrondis */
+  color: #397bb1; /* Couleur du texte */
+  font-size: 15px; /* Taille du texte */
+  cursor: pointer; /* Change le curseur au survol */
+  width: auto; /* Largeur automatique */
+  height: auto; /* Hauteur automatique */
+}
+
+/*notification*/
+.double-click {
+  position: absolute; /* Positionne la flexbox par rapport à la vidéo */
+  transform: translate(-50%, -50%); /* Centre l'élément par rapport au clic */
+  visibility: hidden; /* Cachée par défaut */
+  background-color: white; /* Couleur de fond */
+  color: #397bb1; /* Couleur du texte */
+  padding: 10px; /* Espacement interne */
+  border-radius: 30px; /* Coins arrondis */
+  width: auto; /* Largeur de la notification */
+  height: auto; /* Ajuste la hauteur automatiquement */
+}
+
+.recapipulation {
+  background-color: #397bb1; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  width: 100%; /* Largeur de la section */
+  padding: 20px; /* Espacement interne */
+  border-bottom-left-radius: 10px; /* Bordure en bas */
+  border-bottom-right-radius: 10px; /* Bordure en bas */
+}
+
+.mousemove {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border: 2px solid #397bb1; /* Bordure bleue */
+  border-radius: 50px; /* Coins arrondis */
+  transform: translate(-50%, -50%); /* Centre l'élément */
+  z-index: -1;
+}
+
+/*responsiveness*/
+/* Grille pour les écrans moyens (tablettes) */
+@media screen and (max-width: 900px) {
+  .navbar-menu {
+    flex-direction: row; /* Ligne pour les grands écrans */
+  }
+
+  .navbar-menu li a {
+    font-size: 14px; /* Taille du texte */
+    display: flex; /* Utilise Flexbox pour centrer le texte */
+    flex-direction: column; /* Aligne les éléments horizontalement */
+  }
+  .navbar {
+    padding: 14px; /* Espacement interne */
+  }
+
+  .input-container input {
+    width: 90px; /* Largeur de l'input */
+  }
+
+  .main {
+    margin: 20px auto;
+    width: 80%;
+  }
+  .flexbox1 {
+    margin-left: 20px; /* Espace à gauche de la section */
+    margin-right: 20px; /* Espace à droite de la section */
+    font-size: 16px; /* Taille du texte */
+    z-index: 1; /* Place la flexbox au-dessus de la vidéo */
+    transform: translate(-50%, -50%); /* Centre parfaitement l'élément */
+    top: 70%; /* Centre verticalement */
+    left: 35%; /* Centre horizontalement */
+  }
+  .grid,
+  .grid2 {
+    display: block;
+    margin: 50px;
+  }
+  .grid #gd1,
+  .grid #gd2,
+  .grid #gd3,
+  .grid #gd4 {
+    margin: none;
+    position: center;
+  }
+}
+
+/* Grille pour les petits écrans (mobiles) */
+
+@media screen and (max-width: 480px) {
+  .grid,
+  .grid2 {
+    display: block; /* Utilise le modèle de bloc CSS */
+  }
+  .navbarH,
+  .navbar {
+    display: block; /* Utilise le modèle de bloc CSS */
+    flex-direction: column; /* Colonne pour les petits écrans */
+  }
+  .navbar-menu {
+    display: block; /* Utilise le modèle de bloc CSS */
+  }
+  .input-container input {
+    margin-left: 0; /* Supprime la marge de l'input */
+  }
+  .navbar h6 {
+    font-size: 12px; /* Réduit la taille du texte dans la navbar */
+  }
+
+  .navbar-menu li a {
+    font-size: 12px; /* Réduit la taille des liens */
+  }
+}
+
+@media screen and (min-width: 1268px) {
+  .grid {
+    margin-left: 100px;
+    margin-right: 100px; /* Centre la grille horizontalement */
+  }
+}
