@@ -1,3 +1,5 @@
+const { motion } = require("motion/react");
+
 const Navbar = document.querySelector(".navbar");
 
 // Animation d'apparition au chargement
@@ -14,46 +16,45 @@ window.addEventListener("DOMContentLoaded", () => {
       easing: [0.22, 1, 0.36, 1],
     }
   );
-});
 
-// Détection du sens du scroll
-let lastScrollY = window.scrollY;
+  // Import dynamique de Motion pour les animations
+  import("https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm").then(
+    ({ animate, scroll, press, hover }) => {
+      // Progress bar representing gallery scroll
+      scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }));
 
-window.addEventListener("scroll", () => {
-  const currentScrollY = window.scrollY;
+      // Animation des images au scroll
+      document.querySelectorAll(".img-container").forEach((section) => {
+        const img = section.querySelector("img");
+        if (img) {
+          scroll(animate(img, { scale: [0.8, 1.05, 1] }), {
+            target: section,
+            offset: ["start end", "end end", "end start"],
+          });
+        }
+      });
 
-  // Si on scroll vers le bas (et qu'on a scrollé plus de 50px)
-  if (currentScrollY > lastScrollY && currentScrollY > 50) {
-    // Cacher la navbar
-    Motion.animate(
-      Navbar,
-      {
-        y: [0, -100],
-        opacity: [1, 0],
-      },
-      {
-        duration: 0.3,
-        easing: [0.22, 1, 0.36, 1],
-      }
-    );
-  }
-  // Si on scroll vers le haut
-  else if (currentScrollY < lastScrollY) {
-    // Montrer la navbar
-    Motion.animate(
-      Navbar,
-      {
-        y: [-100, 0],
-        opacity: [0, 1],
-      },
-      {
-        duration: 0.3,
-        easing: [0.22, 1, 0.36, 1],
-      }
-    );
-  }
-  console.log(currentScrollY);
-  console.log(lastScrollY);
+      // Gestion des gestes (press et hover)
+      const gestureState = new WeakMap();
+      const transition = { type: "spring", stiffness: 500, damping: 25 };
+      const initialState = {
+        scale: 1,
+        rotate: 0,
+      };
 
-  lastScrollY = currentScrollY;
+      document.querySelectorAll(".interactive-element").forEach((element) => {
+        gestureState.set(element, { ...initialState });
+
+        // Animation au hover
+        hover(animate(element, { scale: 1.1 }, transition), {
+          hover: animate(element, { scale: 1 }, transition),
+        });
+
+        // Animation au press
+        press(animate(element, { scale: 0.95 }, transition), {
+          release: animate(element, { scale: 1 }, transition),
+        });
+      });
+    }
+  );
 });
