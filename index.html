@@ -1,101 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>car passion</title>
-</head>
-<body class="max-w-[2000px] mx-auto shadow-xl">
-    <header class=" flex flex-col items-center rounded-lg fixed top-0 left-0 right-0 z-50">
-        <div class=" mb-2 navbar z-1000 bg-base-100 shadow-xl w-[100%] sm:w-full max-w-[1900px] border border-gray-300 rounded-box ">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
-      </div>
-      <ul
-        tabindex="-1"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Homepage</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>About</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="navbar-center">
-    <a class="btn btn-ghost text-xl">Car Passion</a>
-  </div>
-  <div class="navbar-end">
- <label class="input">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-width="2.5"
-      fill="none"
-      stroke="currentColor"
+  </head>
+  <body class="max-w-[2000px] mx-auto shadow-xl">
+    <header
+      class="flex flex-col items-center rounded-lg fixed top-0 left-0 right-0 z-50"
     >
-      <circle cx="11" cy="11" r="8"></circle>
-      <path d="m21 21-4.3-4.3"></path>
-    </g>
-  </svg>
-  <input type="search" class="grow" placeholder="Search" />
-  <kbd class="kbd kbd-sm">⌘</kbd>
-  <kbd class="kbd kbd-sm">K</kbd>
-</label></div>
-</div>
+      <div
+        class="mb-2 navbar z-1000 bg-base-100 shadow-xl w-[100%] sm:w-full max-w-[1900px] border border-gray-300 rounded-box"
+      >
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Homepage</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost text-xl">Car Passion</a>
+        </div>
+        <div class="navbar-end">
+          <label class="input">
+            <svg
+              class="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input type="search" class="grow" placeholder="Search" />
+            <kbd class="kbd kbd-sm">⌘</kbd>
+            <kbd class="kbd kbd-sm">K</kbd>
+          </label>
+        </div>
+      </div>
     </header>
-    <section> 
-      <motion.div drag="x" class="image 1 box"></motion.div>
-      <motion.div drag="x" class="image 2 box"></motion.div>
-      <motion.div drag="x" class="image 3 box"></motion.div>
-      <motion.div drag="x" class="image 4 box"></motion.div>
-      <motion.div drag="x" class="image 5 box"></motion.div>
-      <motion.div drag="x" class="image 6 box"></motion.div>
-        <div class="bg1 img-container h-[90vh] w-[80%] rounded-xl overflow-hidden shadow-2xl pt-36 pl-16 text-purple-50">
-          <video src="./asset/276047_tiny.mp4" class="video-background" autoplay muted loop></video>
-            <h1 class="text-2xl font-bold">Welcome on board</h1>
-            <p>a travers ce site j'aimerai vous transmettre ma pation pour L'automobile</p>
-            <p>pour commencer on vas parler des differents types de voitures.</p>
-            <h2>#001</h2>
-        </div>
-        <div class="bg2 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden  pt-36 pl-16 text-purple-50">
-            <h1 class=" text-2xl font-bold">Pour le monde du travail</h1>
-            <p>Le partenaire indispensable des professionnels et des artisans. Découvrez ces véhicules conçus pour le travail, la charge et l'efficacité maximale – la force discrète de notre économie.</p>
-        <p>Plus qu'un moyen de transport, l'utilitaire est un bureau mobile et un atelier roulant. Plongez dans l'univers de la robustesse et de l'optimisation de l'espace au service du quotidien.</p>
-         <h2>#002</h2>
-        </div>
-        <div class="bg3 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50">
-            <h1 class="text-2xl font-bold">Enjoy</h1>
-            <p>Profitez de votre visite sur ce site</p>
-            <h2>#003</h2>
-        </div>
-        <div class="bg4 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50">
-            <h1 class="text-2xl font-bold">Share</h1>
-            <p >Partagez votre passion avec d'autres passionnés</p>
-            <h2>#004</h2>
-        </div>
-        <div class="bg5 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50">
-          <h1 class="text-2xl font-bold">Contact</h1>
-          <p>Pour toute question ou suggestion, n'hésitez pas à nous contacter.</p>
-            <h2>#005</h2>
-        </div>
-        <div class="bg6 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50">
-          <h1 class="text-2xl font-bold">Merci</h1>
-          <p >Merci de votre visite et à bientôt pour de nouvelles aventures automobiles !</p>
-            <h2>#006</h2>
-        </div>
-        <div class="bg6 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50">
-          <h1 class="text-2xl font-bold">Merci</h1>
-          <p >Merci de votre visite et à bientôt pour de nouvelles aventures automobiles !</p>
-            <h2>#007</h2>
-        </div>
+    <section>
+      <div
+        class="box image1 w-[30vw] h-[25vh] rounded-xl absolute cursor-grab active:cursor-grabbing top-110 right-0 z-1000 fixed bg-slate-200 flex items-center justify-center shadow-xl"
+      >
+        bonjour
+      </div>
+      <div
+        class="box image2 w-[30vw] h-[25vh] rounded-xl absolute cursor-grab active:cursor-grabbing top-110 right-0 z-1000 fixed bg-slate-200 flex items-center justify-center shadow-xl"
+      >
+        bonjour
+      </div>
+      <div
+        class="box image3 w-[30vw] h-[25vh] rounded-xl absolute cursor-grab active:cursor-grabbing top-110 right-0 z-1000 fixed bg-slate-200 flex items-center justify-center shadow-xl"
+      >
+        bonjour
+      </div>
+      <div
+        class="box image4 w-[30vw] h-[25vh] rounded-xl absolute cursor-grab active:cursor-grabbing top-110 right-0 z-1000 fixed bg-slate-200 flex items-center justify-center shadow-xl"
+      >
+        bonjour
+      </div>
+      <div
+        class="box image5 w-[30vw] h-[25vh] rounded-xl absolute cursor-grab active:cursor-grabbing top-110 right-0 z-1000 fixed bg-slate-200 flex items-center justify-center shadow-xl"
+      >
+        bonjour
+      </div>
+      <div
+        class="box image6 w-[30vw] h-[25vh] rounded-xl absolute cursor-grab active:cursor-grabbing top-110 right-0 z-1000 fixed bg-slate-200 flex items-center justify-center shadow-xl"
+      >
+        bonjour
+      </div>
+      <div
+        class="bg1 img-container h-[90vh] w-[80%] rounded-xl overflow-hidden shadow-2xl pt-36 pl-16 text-purple-50"
+      >
+        <video
+          src="./asset/276047_tiny.mp4"
+          class="video-background"
+          autoplay
+          muted
+          loop
+        ></video>
+        <h1 class="text-2xl font-bold">Welcome on board</h1>
+        <p>
+          a travers ce site j'aimerai vous transmettre ma pation pour
+          L'automobile
+        </p>
+        <p>pour commencer on vas parler des differents types de voitures.</p>
+        <h2>#001</h2>
+      </div>
+      <div
+        class="bg2 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50"
+      >
+        <h1 class="text-2xl font-bold">Pour le monde du travail</h1>
+        <p>
+          Le partenaire indispensable des professionnels et des artisans.
+          Découvrez ces véhicules conçus pour le travail, la charge et
+          l'efficacité maximale – la force discrète de notre économie.
+        </p>
+        <p>
+          Plus qu'un moyen de transport, l'utilitaire est un bureau mobile et un
+          atelier roulant. Plongez dans l'univers de la robustesse et de
+          l'optimisation de l'espace au service du quotidien.
+        </p>
+        <h2>#002</h2>
+      </div>
+      <div
+        class="bg3 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50"
+      >
+        <h1 class="text-2xl font-bold">Enjoy</h1>
+        <p>Profitez de votre visite sur ce site</p>
+        <h2>#003</h2>
+      </div>
+      <div
+        class="bg4 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50"
+      >
+        <h1 class="text-2xl font-bold">Share</h1>
+        <p>Partagez votre passion avec d'autres passionnés</p>
+        <h2>#004</h2>
+      </div>
+      <div
+        class="bg5 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50"
+      >
+        <h1 class="text-2xl font-bold">Contact</h1>
+        <p>
+          Pour toute question ou suggestion, n'hésitez pas à nous contacter.
+        </p>
+        <h2>#005</h2>
+      </div>
+      <div
+        class="bg6 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50"
+      >
+        <h1 class="text-2xl font-bold">Merci</h1>
+        <p>
+          Merci de votre visite et à bientôt pour de nouvelles aventures
+          automobiles !
+        </p>
+        <h2>#006</h2>
+      </div>
+      <div
+        class="bg6 img-container h-[100vh] w-[80%] rounded-xl overflow-hidden pt-36 pl-16 text-purple-50"
+      >
+        <h1 class="text-2xl font-bold">Merci</h1>
+        <p>
+          Merci de votre visite et à bientôt pour de nouvelles aventures
+          automobiles !
+        </p>
+        <h2>#007</h2>
+      </div>
+      <div class="progress"></div>
     </section>
-</body>
-<script src="index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</html> 
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="index.js"></script>
+  <script type="module">
+    import {
+      animate,
+      scroll,
+      hover,
+      press,
+    } from "https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm";
+
+    hover(".box", (element) => {
+      animate(element, { scale: 1.1 });
+      return () => animate(element, { scale: 1 });
+    });
+
+    press(".box", (element) => {
+      animate(element, { scale: 0.8 }, { type: "spring", stiffness: 1000 });
+
+      return () =>
+        animate(element, { scale: 1 }, { type: "spring", stiffness: 500 });
+    });
+
+    // Progress bar representing gallery scroll
+    scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }));
+
+    document.querySelectorAll(".img-container").forEach((section) => {
+      const header = section.querySelector("h2");
+      scroll(animate(header, { y: [-400, 400] }, { ease: "linear" }), {
+        target: header,
+      });
+      const paragraph = section.querySelectorAll("p");
+      paragraph.forEach((p) => {
+        scroll(animate(p, { x: [-20, 500] }, { ease: "linear" }), {
+          target: p,
+        });
+      });
+      const title = section.querySelector("h1");
+      scroll(animate(title, { x: [0, 500] }, { ease: "linear" }), {
+        target: title,
+      });
+    });
+  </script>
+</html>

@@ -4,6 +4,12 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+/* Navbar sans text-shadow */
+.navbar, .navbar * {
+    text-shadow: none !important;
+}
+
+
 .bg1 {
     position: relative;
     overflow: hidden;
@@ -112,4 +118,8 @@ html {
         background: var(--accent);
         bottom: 50px;
         transform: scaleX(0);
+    }
+
+    .box{
+        transition: transform 0.3s ease-out;
     }
