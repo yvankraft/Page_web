@@ -1,7 +1,11 @@
 import React from "react";
 
-const Journal = () => {
-  return <div>journal</div>;
+const journal = () => {
+  return (
+    <div>
+      <h1>journal</h1>
+    </div>
+  );
 };
 
-export default Journal;
+export default journal;
