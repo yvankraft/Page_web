@@ -36,8 +36,8 @@ const Navbar = () => {
         className="div"
       >
         <Link
-          href="/pages/Motorsport Arena"
-          className={getStyle("/pages/Motorsport Arena")}
+          href="/motorsport-arena"
+          className={getStyle("/motorsport-arena")}
         >
           Motorsport Arena
         </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
         whileTap={{ scale: 0.9 }}
         className="div"
       >
-        <Link href="/contact" className={getStyle("/contact")}>
+        <Link href="/lifestyle" className={getStyle("/lifestyle")}>
           Lifestyle & Utility
         </Link>
       </motion.div>
@@ -65,7 +65,7 @@ const Navbar = () => {
         whileTap={{ scale: 0.9 }}
         className="div"
       >
-        <Link href="/innovation-lab" className={getStyle("/innovation-lab")}>
+        <Link href="/innovation" className={getStyle("/innovation")}>
           The Innovation Lab
         </Link>
       </motion.div>
@@ -74,7 +74,7 @@ const Navbar = () => {
         whileTap={{ scale: 0.9 }}
         className="div"
       >
-        <Link href="/the-journal" className={getStyle("/the-journal")}>
+        <Link href="/journal" className={getStyle("/journal")}>
           The Journal
         </Link>
       </motion.div>

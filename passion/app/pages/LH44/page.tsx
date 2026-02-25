@@ -1,7 +1,7 @@
 import React from "react";
 
 const LH44 = () => {
-  return <div>LH44</div>;
+  return <div>Bonjour</div>;
 };
 
 export default LH44;
