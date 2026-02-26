@@ -1,6 +1,6 @@
 import React from "react";
 
-const LH44 = () => {
+const page = () => {
   return (
     <main className="flex flex-col h-screen items-center justify-center">
       <div className="flex flex-col items-center justify-center text-center p-4">
@@ -30,4 +30,4 @@ const LH44 = () => {
   );
 };
 
-export default LH44;
+export default page;
