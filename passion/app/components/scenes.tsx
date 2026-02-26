@@ -1,16 +1,28 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stage, Float } from "@react-three/drei";
-import { Suspense } from "react";
-import { ReactNode } from "react";
+import { Suspense, ReactNode } from "react";
+
 interface SceneProps {
   children: ReactNode;
+  fov?: number;
+  rotationIntensity?: number; // Un nombre, pas un tableau
+  floatIntensity?: number;
+  speed?: number;
+  position?: [number, number, number]; // [X, Y, Z]
+  rotationY?: number;
 }
 
-export default function Scene({ children }: SceneProps) {
+export default function Scene({
+  children,
+  fov = 45,
+  speed = 2,
+  position = [0, 0, 0], // Par défaut au centre
+  rotationY = 0,
+}: SceneProps) {
   return (
     <section className="relative h-150 w-full my-10 border-b">
-      <Canvas shadows camera={{ position: [0, 0, 5], fov: 45 }}>
+      <Canvas shadows camera={{ position: [0, 0, 5], fov: fov }}>
         <Suspense fallback={null}>
           <Stage
             intensity={0.5}
@@ -18,13 +30,10 @@ export default function Scene({ children }: SceneProps) {
             adjustCamera={true}
             shadows={false}
           >
-            {/* Float ajoute un petit mouvement de flottement automatique */}
-            <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-              {children}
-            </Float>
+            {children}
           </Stage>
         </Suspense>
-        <OrbitControls enableZoom={false} makeDefault />
+        <OrbitControls enableZoom={true} makeDefault />
       </Canvas>
     </section>
   );

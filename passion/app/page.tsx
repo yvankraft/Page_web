@@ -134,7 +134,7 @@ const page = () => {
             not just describing summer, but the thrill of a motorcycle ride on a
             sunny afternoon. Feel the freedom.
           </p>
-          <SeeMoreButton href="/twowheels" />
+          <SeeMoreButton href="/twoWheels" />
         </motion.div>
       </section>
       {/* SECTION 7 : Fond Uni ou autre contenu */}
