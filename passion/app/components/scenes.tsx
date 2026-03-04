@@ -2,6 +2,7 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stage, Float } from "@react-three/drei";
 import { Suspense, ReactNode } from "react";
+import { Environment } from "@react-three/drei";
 
 interface SceneProps {
   children: ReactNode;
@@ -22,7 +23,7 @@ export default function Scene({
 }: SceneProps) {
   return (
     <section className="relative h-150 w-full my-10 border-b">
-      <Canvas shadows camera={{ position: [0, 0, 5], fov: fov }}>
+      <Canvas camera={{ position: [0, 0, 5], fov: fov }}>
         <Suspense fallback={null}>
           <Stage
             intensity={0.5}
