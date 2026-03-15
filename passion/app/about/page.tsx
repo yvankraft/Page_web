@@ -25,6 +25,7 @@ const page = () => {
           Diese Seite befindet sich derzeit noch im Aufbau. Sie wird online
           gehen, sobald sie fertiggestellt ist. Vielen Dank für Ihr Verständnis!
         </p>
+        <p>yo</p>
       </div>
     </main>
   );
